@@ -34,7 +34,6 @@ Object.defineProperties(Base.prototype, getAllDefinedProperties(AmpersandModel.p
 _.assign(Base, AmpersandModel);
 
 _.assign(Base.prototype, {
-  extraProperties: "allow",
   trigger: function (event, model, value) {
     var ret = AmpersandModel.prototype.trigger.apply(this, arguments);
 
