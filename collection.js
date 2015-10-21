@@ -66,8 +66,8 @@ _.assign(Base.prototype, {
     }
 
     else if (event === 'reset' || event === 'sort') {
-      users.notify({
-        eventName: "change", object: users,
+      this.notify({
+        eventName: "change", object: this,
         action: "update",
         index: 0
       });
