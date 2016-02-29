@@ -1,6 +1,6 @@
 {
   "name": "nativescript-ampersand",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A NativeScript module to add Ampersand Models and Collections for use in place of nativescript observables",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/dapriett/nativescript-ampersand",
   "author": "Dan Prietti",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ampersand-collection": "^1.4.5",
     "ampersand-collection-lodash-mixin": "^2.0.0",
