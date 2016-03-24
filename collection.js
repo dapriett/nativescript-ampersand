@@ -21,7 +21,7 @@ function getAllDefinedProperties( obj, omit) {
 
   do {
     Object.getOwnPropertyNames( obj ).forEach(function ( prop ) {
-      if ( !props[prop] && !_.contains(omit, prop)) {
+      if ( !props[prop] && !_.includes(omit, prop)) {
         props[prop] = Object.getOwnPropertyDescriptor(obj, prop)
       }
     });
