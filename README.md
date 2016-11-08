@@ -7,6 +7,8 @@ A NativeScript module to add [Ampersand.js](http://ampersandjs.com/) [Models](ht
 [david-dm-url]:https://david-dm.org/dapriett/nativescript-ampersand
 [david-dm-image]:https://david-dm.org/dapriett/nativescript-ampersand.svg
 
+[![NPM](https://nodei.co/npm/nativescript-ampersand.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/nativescript-ampersand)
+
 ## Installation
 
 Run `npm install nativescript-ampersand --save` from your nativescript project
