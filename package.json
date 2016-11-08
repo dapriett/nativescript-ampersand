@@ -1,6 +1,6 @@
 {
   "name": "nativescript-ampersand",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "A NativeScript module to add Ampersand Models and Collections for use in place of nativescript observables",
   "main": "index.js",
   "scripts": {
@@ -14,17 +14,17 @@
   "author": "Dan Prietti",
   "license": "MIT",
   "dependencies": {
-    "ampersand-collection": "^1.4.5",
-    "ampersand-collection-lodash-mixin": "^2.0.0",
-    "ampersand-state": "^4.6.0",
-    "lodash.assign": "^3.0.0",
-    "lodash.clone": "^3.0.3",
-    "lodash.defaults": "^3.1.0",
-    "lodash.defer": "^3.1.0",
-    "lodash.includes": "^3.1.0",
+    "ampersand-collection": "^2.0.0",
+    "ampersand-collection-lodash-mixin": "^4.0.0",
+    "ampersand-state": "^5.0.2",
+    "lodash.assign": "^4.2.0",
+    "lodash.clone": "^4.5.0",
+    "lodash.defaults": "^4.2.0",
+    "lodash.defer": "^4.1.0",
+    "lodash.includes": "^4.3.0",
     "lodash.isobject": "^3.0.2",
-    "lodash.result": "^3.0.0",
+    "lodash.result": "^4.5.2",
     "media-type": "0.3.0",
-    "qs": "^4.0.0"
+    "qs": "^6.3.0"
   }
 }

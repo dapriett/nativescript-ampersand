@@ -1,5 +1,6 @@
 var ObservableArray = require("data/observable-array").ObservableArray;
-var _ = require("lodash");
+var assign = require('lodash.assign');
+var includes = require('lodash.includes');
 var BaseModel = require("./model");
 var AmpersandCollection = require("./lib/ampersand-rest-collection");
 
@@ -21,7 +22,7 @@ function getAllDefinedProperties( obj, omit) {
 
   do {
     Object.getOwnPropertyNames( obj ).forEach(function ( prop ) {
-      if ( !props[prop] && !_.contains(omit, prop)) {
+      if ( !props[prop] && !includes(omit, prop)) {
         props[prop] = Object.getOwnPropertyDescriptor(obj, prop)
       }
     });
@@ -33,9 +34,9 @@ function getAllDefinedProperties( obj, omit) {
 // Copy all Ampersand defined properties
 Object.defineProperties(Base.prototype, getAllDefinedProperties(AmpersandCollection.prototype, ["constructor"]));
 
-_.assign(Base, AmpersandCollection);
+assign(Base, AmpersandCollection);
 
-_.assign(Base.prototype, {
+assign(Base.prototype, {
   model: BaseModel,
   trigger: function (event, model, collection, options) {
     var ret = AmpersandCollection.prototype.trigger.apply(this, arguments);
@@ -68,7 +69,7 @@ _.assign(Base.prototype, {
     else if (event === 'reset' || event === 'sort') {
       this.notify({
         eventName: "change", object: this,
-        action: "update",
+        action: "splice",
         index: 0
       });
     }

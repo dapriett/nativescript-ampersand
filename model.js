@@ -1,5 +1,6 @@
 var Observable = require("data/observable").Observable;
-var _ = require("lodash");
+var assign = require('lodash.assign');
+var includes = require('lodash.includes');
 var AmpersandModel = require("./lib/ampersand-model");
 
 // Extend Nativescript's Observable object
@@ -19,7 +20,7 @@ function getAllDefinedProperties( obj, omit) {
 
   do {
     Object.getOwnPropertyNames( obj ).forEach(function ( prop ) {
-      if ( !props[prop] && !_.contains(omit, prop)) {
+      if ( !props[prop] && !includes(omit, prop)) {
         props[prop] = Object.getOwnPropertyDescriptor(obj, prop)
       }
     });
@@ -31,9 +32,9 @@ function getAllDefinedProperties( obj, omit) {
 // Copy all Ampersand defined properties
 Object.defineProperties(Base.prototype, getAllDefinedProperties(AmpersandModel.prototype, ["constructor"]));
 
-_.assign(Base, AmpersandModel);
+assign(Base, AmpersandModel);
 
-_.assign(Base.prototype, {
+assign(Base.prototype, {
   trigger: function (event, model, value) {
     var ret = AmpersandModel.prototype.trigger.apply(this, arguments);
 

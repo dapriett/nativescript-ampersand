@@ -1,0 +1,31 @@
+<Page navigatingTo="load" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:lv="nativescript-telerik-ui/listview">
+    <StackLayout orientation="vertical">
+        <TextField text="{{ newTodo }}" hint="Enter Todo" returnKeyType="go" returnPress="addTodo"></TextField>
+        <StackLayout class="hr"></StackLayout>
+        <lv:RadListView id="listView" itemSwipe="true"
+                        items="{{ todos }}"
+                        pullToRefresh="true"
+                        pullToRefreshInitiated="refresh">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <StackLayout class="todo" orientation="vertical">
+                    <label class="{{completed ? 'item completed' : 'item active'}}" tap="markTodo" text="{{title}}"/>
+                    <StackLayout class="hr"></StackLayout>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto">
+                    <StackLayout class="markAction" col="0" tap="markTodo">
+                        <Label horizontalAlignment="center" text="{{completed ? 'Undo' : 'Done'}}"
+                               verticalAlignment="center"/>
+                    </StackLayout>
+                    <StackLayout class="deleteAction" col="2" tap="removeTodo">
+                        <Label horizontalAlignment="center" text="delete" verticalAlignment="center"/>
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemSwipeTemplate>
+        </lv:RadListView>
+    </StackLayout>
+</Page>

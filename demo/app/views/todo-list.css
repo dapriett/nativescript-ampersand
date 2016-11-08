@@ -1,0 +1,36 @@
+.todo {
+    padding-top: 20;
+    background-color: white;
+}
+
+.todo label {
+    padding-left: 10;
+    padding-right: 10;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #D9D9D9;
+}
+
+.hr {
+    margin-top: 20;
+    height: 1;
+    background-color: #E6E6E6;
+}
+
+.markAction {
+    background-color: blue;
+    padding: 16;
+}
+
+.deleteAction {
+    background-color: red;
+    padding: 16;
+}
+
+.markAction label, .deleteAction label {
+    text-size: 20;
+    color: #FFFFFF;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.demo",
+    "tns-ios": {
+      "version": "2.5.0-2016-11-3-2"
+    },
+    "tns-android": {
+      "version": "2.5.0-next-2016-11-07-1363"
+    }
+  },
+  "dependencies": {
+    "nativescript-ampersand": "file:../",
+    "nativescript-telerik-ui": "^1.4.1",
+    "tns-core-modules": "2.3.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.18.0",
+    "babel-types": "6.18.0",
+    "babylon": "6.13.1",
+    "lazy": "1.0.11"
+  }
+}
