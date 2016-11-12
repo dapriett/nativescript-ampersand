@@ -1,6 +1,6 @@
 var ObservableArray = require("data/observable-array").ObservableArray;
-var assign = require('lodash.assign');
-var includes = require('lodash.includes');
+var assign = require('lodash/assign');
+var includes = require('lodash/includes');
 var BaseModel = require("./model");
 var AmpersandCollection = require("./lib/ampersand-rest-collection");
 

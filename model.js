@@ -1,6 +1,6 @@
 var Observable = require("data/observable").Observable;
-var assign = require('lodash.assign');
-var includes = require('lodash.includes');
+var assign = require('lodash/assign');
+var includes = require('lodash/includes');
 var AmpersandModel = require("./lib/ampersand-model");
 
 // Extend Nativescript's Observable object
